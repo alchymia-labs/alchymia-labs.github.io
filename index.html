@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchymia Labs - Quantitative Alchemy Laboratory</title>
+    <meta name="description" content="Alchymia Labs: Transmuting market chaos into actionable alpha through quantitative alchemy.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Alchymia Labs">
+    <meta property="og:description" content="Quantitative Alchemy Laboratory - Transmuting market chaos into actionable alpha">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://alchymia-labs.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alchymia Labs">
+    <meta name="twitter:description" content="Quantitative Alchemy Laboratory">
+    <meta name="twitter:image" content="images/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0A0F2C">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alchymia-labs.github.io">
+</head>
+<body>
+    <!-- Starfield Canvas -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav-container">
+            <a href="#top" class="nav-logo">
+                <img src="images/logo.svg" alt="Alchymia Labs Logo" width="44" height="44">
+                <span class="nav-logo-text">Alchymia Labs</span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-lang="en">ABOUT</a><a href="#about" data-lang="zh" style="display: none;">关于</a></li>
+                <li><a href="#capabilities" data-lang="en">CAPABILITIES</a><a href="#capabilities" data-lang="zh" style="display: none;">能力</a></li>
+                <li><a href="#method" data-lang="en">METHOD</a><a href="#method" data-lang="zh" style="display: none;">方法</a></li>
+                <li><a href="#contact" data-lang="en">CONTACT</a><a href="#contact" data-lang="zh" style="display: none;">联系</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle">EN / 中文</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+        <div class="hero-content">
+            <div class="hero-icon">
+                <img src="images/logo.svg" alt="Alchymia Labs" class="hero-logo">
+            </div>
+            <p class="hero-subtitle" data-lang="en">QUANTITATIVE ALCHEMY LABORATORY</p>
+            <p class="hero-subtitle" data-lang="zh" style="display: none;">量化炼金实验室</p>
+            <h1 class="hero-title" data-lang="en">Transmuting Market Chaos<br>into Actionable Alpha</h1>
+            <h1 class="hero-title" data-lang="zh" style="display: none;">将市场混沌<br>炼化为可执行的Alpha</h1>
+            <p class="hero-description" data-lang="en">
+                Like ancient alchemists transmuting base metals into gold, we apply rigorous quantitative methods
+                to distill market noise into pure, actionable trading signals.
+            </p>
+            <p class="hero-description" data-lang="zh" style="display: none;">
+                如同古代炼金术士将贱金属转化为黄金，我们运用严谨的量化方法，
+                将市场噪声蒸馏提纯为可执行的交易信号。
+            </p>
+            <div class="hero-buttons">
+                <a href="#capabilities" class="btn btn-primary" data-lang="en">Explore Our Laboratory</a>
+                <a href="#capabilities" class="btn btn-primary" data-lang="zh" style="display: none;">探索实验室</a>
+                <a href="https://the-alephain-guild.github.io" class="btn btn-secondary" data-lang="en">The Alephain Guild</a>
+                <a href="https://the-alephain-guild.github.io" class="btn btn-secondary" data-lang="zh" style="display: none;">阿莱夫行会</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-lang="en">Scroll to explore</span>
+            <span data-lang="zh" style="display: none;">向下滚动探索</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-lang="en">The Laboratory</h2>
+            <h2 class="section-title" data-lang="zh" style="display: none;">关于实验室</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead" data-lang="en">
+                        Alchymia Labs is the quantitative research arm of The Alephain Guild, dedicated to
+                        the systematic transmutation of market chaos into structured alpha.
+                    </p>
+                    <p class="lead" data-lang="zh" style="display: none;">
+                        Alchymia Labs是阿莱夫行会的量化研究部门，致力于将市场混沌系统性地转化为结构化的Alpha。
+                    </p>
+                    <p data-lang="en">
+                        Our name draws from the ancient art of alchemy — the precursor to modern chemistry.
+                        Where alchemists sought to transform base elements into gold through precise processes,
+                        we seek to transform raw market data into refined trading insights through rigorous
+                        quantitative methodology.
+                    </p>
+                    <p data-lang="zh" style="display: none;">
+                        我们的名称源自古老的炼金术——现代化学的先驱。正如炼金术士通过精确的工艺将贱金属转化为黄金，
+                        我们通过严谨的量化方法将原始市场数据转化为精炼的交易洞察。
+                    </p>
+                </div>
+                <div class="about-philosophy">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">⚗️</div>
+                        <h3 data-lang="en">Solve et Coagula</h3>
+                        <h3 data-lang="zh" style="display: none;">分解与凝聚</h3>
+                        <p data-lang="en">Dissolve the complex, coagulate the essential — our approach to market analysis.</p>
+                        <p data-lang="zh" style="display: none;">分解复杂，凝聚本质——我们的市场分析方法论。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="section capabilities" id="capabilities">
+        <div class="container">
+            <h2 class="section-title" data-lang="en">Core Capabilities</h2>
+            <h2 class="section-title" data-lang="zh" style="display: none;">核心能力</h2>
+            <p class="section-subtitle" data-lang="en">The four pillars of our quantitative alchemy</p>
+            <p class="section-subtitle" data-lang="zh" style="display: none;">量化炼金的四大支柱</p>
+
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-icon">🔬</div>
+                    <h3 data-lang="en">Strategy Research</h3>
+                    <h3 data-lang="zh" style="display: none;">策略研发</h3>
+                    <p data-lang="en">
+                        Deep investigation into market microstructure, statistical patterns,
+                        and behavioral anomalies to uncover exploitable inefficiencies.
+                    </p>
+                    <p data-lang="zh" style="display: none;">
+                        深入研究市场微观结构、统计模式和行为异常，发掘可利用的市场低效。
+                    </p>
+                    <ul class="capability-features">
+                        <li data-lang="en">Factor Discovery</li>
+                        <li data-lang="zh" style="display: none;">因子挖掘</li>
+                        <li data-lang="en">Signal Generation</li>
+                        <li data-lang="zh" style="display: none;">信号生成</li>
+                        <li data-lang="en">Hypothesis Testing</li>
+                        <li data-lang="zh" style="display: none;">假设检验</li>
+                    </ul>
+                </div>
+
+                <div class="capability-card">
+                    <div class="capability-icon">⚙️</div>
+                    <h3 data-lang="en">Backtesting Engine</h3>
+                    <h3 data-lang="zh" style="display: none;">回测引擎</h3>
+                    <p data-lang="en">
+                        Rigorous historical simulation infrastructure ensuring strategy
+                        validity before deployment to live markets.
+                    </p>
+                    <p data-lang="zh" style="display: none;">
+                        严谨的历史模拟基础设施，确保策略在实盘部署前经过充分验证。
+                    </p>
+                    <ul class="capability-features">
+                        <li data-lang="en">Event-Driven Simulation</li>
+                        <li data-lang="zh" style="display: none;">事件驱动模拟</li>
+                        <li data-lang="en">Slippage Modeling</li>
+                        <li data-lang="zh" style="display: none;">滑点建模</li>
+                        <li data-lang="en">Walk-Forward Analysis</li>
+                        <li data-lang="zh" style="display: none;">滚动优化分析</li>
+                    </ul>
+                </div>
+
+                <div class="capability-card">
+                    <div class="capability-icon">🛡️</div>
+                    <h3 data-lang="en">Risk Alchemy</h3>
+                    <h3 data-lang="zh" style="display: none;">风险炼金</h3>
+                    <p data-lang="en">
+                        Transforming uncertainty into quantified risk through advanced
+                        statistical modeling and continuous monitoring.
+                    </p>
+                    <p data-lang="zh" style="display: none;">
+                        通过先进的统计建模和持续监控，将不确定性转化为可量化的风险。
+                    </p>
+                    <ul class="capability-features">
+                        <li data-lang="en">VaR & CVaR Models</li>
+                        <li data-lang="zh" style="display: none;">VaR与CVaR模型</li>
+                        <li data-lang="en">Tail Risk Analysis</li>
+                        <li data-lang="zh" style="display: none;">尾部风险分析</li>
+                        <li data-lang="en">Portfolio Optimization</li>
+                        <li data-lang="zh" style="display: none;">组合优化</li>
+                    </ul>
+                </div>
+
+                <div class="capability-card">
+                    <div class="capability-icon">💎</div>
+                    <h3 data-lang="en">Alpha Extraction</h3>
+                    <h3 data-lang="zh" style="display: none;">Alpha提取</h3>
+                    <p data-lang="en">
+                        The final distillation — extracting pure alpha from the noise
+                        through systematic signal processing and execution.
+                    </p>
+                    <p data-lang="zh" style="display: none;">
+                        最终的蒸馏提纯——通过系统性的信号处理和执行，从噪声中提取纯净的Alpha。
+                    </p>
+                    <ul class="capability-features">
+                        <li data-lang="en">Signal Filtering</li>
+                        <li data-lang="zh" style="display: none;">信号过滤</li>
+                        <li data-lang="en">Execution Optimization</li>
+                        <li data-lang="zh" style="display: none;">执行优化</li>
+                        <li data-lang="en">Performance Attribution</li>
+                        <li data-lang="zh" style="display: none;">业绩归因</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section class="section method" id="method">
+        <div class="container">
+            <h2 class="section-title" data-lang="en">The Alchemical Process</h2>
+            <h2 class="section-title" data-lang="zh" style="display: none;">炼金流程</h2>
+            <p class="section-subtitle" data-lang="en">Our systematic approach to transmuting market data into alpha</p>
+            <p class="section-subtitle" data-lang="zh" style="display: none;">将市场数据转化为Alpha的系统方法</p>
+
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">I</div>
+                    <div class="step-content">
+                        <h3 data-lang="en">Observation</h3>
+                        <h3 data-lang="zh" style="display: none;">观察</h3>
+                        <p data-lang="en">Gathering raw market data and identifying patterns in the chaos.</p>
+                        <p data-lang="zh" style="display: none;">收集原始市场数据，从混沌中识别模式。</p>
+                    </div>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="step-number">II</div>
+                    <div class="step-content">
+                        <h3 data-lang="en">Hypothesis</h3>
+                        <h3 data-lang="zh" style="display: none;">假设</h3>
+                        <p data-lang="en">Formulating testable theories based on observed phenomena.</p>
+                        <p data-lang="zh" style="display: none;">基于观察到的现象构建可验证的理论。</p>
+                    </div>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="step-number">III</div>
+                    <div class="step-content">
+                        <h3 data-lang="en">Validation</h3>
+                        <h3 data-lang="zh" style="display: none;">验证</h3>
+                        <p data-lang="en">Rigorous backtesting and statistical validation of hypotheses.</p>
+                        <p data-lang="zh" style="display: none;">严格的回测和假设的统计验证。</p>
+                    </div>
+                </div>
+
+                <div class="process-arrow">→</div>
+
+                <div class="process-step">
+                    <div class="step-number">IV</div>
+                    <div class="step-content">
+                        <h3 data-lang="en">Distillation</h3>
+                        <h3 data-lang="zh" style="display: none;">蒸馏</h3>
+                        <p data-lang="en">Refining validated signals into deployable trading strategies.</p>
+                        <p data-lang="zh" style="display: none;">将验证过的信号精炼为可部署的交易策略。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="method-quote">
+                <blockquote>
+                    <p data-lang="en">"In the crucible of rigorous analysis, market chaos transforms into structured opportunity."</p>
+                    <p data-lang="zh" style="display: none;">"在严谨分析的坩埚中，市场混沌转化为结构化的机会。"</p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.svg" alt="Alchymia Labs" class="footer-logo">
+                    <h3>Alchymia Labs</h3>
+                    <p data-lang="en">Quantitative Alchemy Laboratory</p>
+                    <p data-lang="zh" style="display: none;">量化炼金实验室</p>
+                    <p class="footer-tagline" data-lang="en">A division of The Alephain Guild</p>
+                    <p class="footer-tagline" data-lang="zh" style="display: none;">阿莱夫行会旗下</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-lang="en">Navigation</h4>
+                    <h4 data-lang="zh" style="display: none;">导航</h4>
+                    <ul>
+                        <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="zh" style="display: none;">关于</a></li>
+                        <li><a href="#capabilities" data-lang="en">Capabilities</a><a href="#capabilities" data-lang="zh" style="display: none;">能力</a></li>
+                        <li><a href="#method" data-lang="en">Method</a><a href="#method" data-lang="zh" style="display: none;">方法</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-guild">
+                    <h4 data-lang="en">The Alephain Guild</h4>
+                    <h4 data-lang="zh" style="display: none;">阿莱夫行会</h4>
+                    <ul>
+                        <li><a href="https://the-alephain-guild.github.io" data-lang="en">Main Site</a><a href="https://the-alephain-guild.github.io" data-lang="zh" style="display: none;">主站</a></li>
+                        <li><a href="https://the-alephain-guild.github.io#principles" data-lang="en">Principles</a><a href="https://the-alephain-guild.github.io#principles" data-lang="zh" style="display: none;">原则</a></li>
+                        <li><a href="https://the-alephain-guild.github.io#ecosystem" data-lang="en">Ecosystem</a><a href="https://the-alephain-guild.github.io#ecosystem" data-lang="zh" style="display: none;">生态</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-lang="en">&copy; 2025 Alchymia Labs. All rights reserved.</p>
+                <p data-lang="zh" style="display: none;">&copy; 2025 Alchymia Labs. 保留所有权利。</p>
+                <p class="brand-adherence" data-lang="en">This website strictly adheres to The Alephain Guild Brand Guide</p>
+                <p class="brand-adherence" data-lang="zh" style="display: none;">本网站严格遵循阿莱夫行会品牌指南</p>
+            </div>
+
+            <a href="#top" class="back-to-top" data-lang="en">↑ BACK TO TOP</a>
+            <a href="#top" class="back-to-top" data-lang="zh" style="display: none;">↑ 返回顶部</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

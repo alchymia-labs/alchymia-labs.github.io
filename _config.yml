@@ -1,0 +1,30 @@
+# Alchymia Labs - GitHub Pages Configuration
+# Quantitative Alchemy Laboratory
+
+title: Alchymia Labs
+description: Quantitative Alchemy Laboratory - Transmuting market chaos into actionable alpha
+url: "https://alchymia-labs.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - node_modules
+  - package.json
+  - package-lock.json
+
+# Include files
+include:
+  - _config.yml
+
+# Plugins
+plugins: []
+
+# Theme (using custom styles)
+theme: null
