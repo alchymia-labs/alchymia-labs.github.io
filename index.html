@@ -763,7 +763,7 @@ body[data-active="zh"] .lede,body[data-active="zh"] .about-body p,body[data-acti
     <span><span class="pulse"></span> <span data-lang="en">Live · seven channels</span><span data-lang="zh">实盘 · 七条通道</span></span>
     <span data-lang="en">Volume I · Charter · public</span>
     <span data-lang="zh">第一卷 · 总章程 · 公开</span>
-    <span class="tnum">26.05.02 · HKG · 22:00 UTC+8</span>
+    <span class="tnum" id="dateline">— · HKG · — UTC+8</span>
   </div>
 </header>
 
@@ -1383,6 +1383,23 @@ body[data-active="zh"] .lede,body[data-active="zh"] .about-body p,body[data-acti
   if(burger) burger.addEventListener('click', () => setSheet(!sheet.classList.contains('is-open')));
   document.querySelectorAll('[data-sheet-link]').forEach(a => a.addEventListener('click', () => setSheet(false)));
   document.addEventListener('keydown', e => { if(e.key === 'Escape') setSheet(false); });
+
+  // Mast dateline — Hong Kong wall clock, refreshed each minute.
+  function renderDateline(){
+    const el = document.getElementById('dateline');
+    if (!el) return;
+    const fmt = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Hong_Kong',
+      year: '2-digit', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hour12: false
+    });
+    const p = Object.fromEntries(
+      fmt.formatToParts(new Date()).map(x => [x.type, x.value])
+    );
+    el.textContent = `${p.year}.${p.month}.${p.day} · HKG · ${p.hour}:${p.minute} UTC+8`;
+  }
+  renderDateline();
+  setInterval(renderDateline, 60_000);
 </script>
 </body>
 </html>
