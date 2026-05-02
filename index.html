@@ -1350,11 +1350,25 @@ body[data-active="zh"] .lede,body[data-active="zh"] .about-body p,body[data-acti
     document.querySelectorAll('.lang-toggle .en, .lang-toggle .zh').forEach(el=>el.classList.remove('on'));
     document.querySelectorAll('.lang-toggle .' + document.body.dataset.active).forEach(el=>el.classList.add('on'));
   }
-  function toggleLang(){
-    document.body.dataset.active = document.body.dataset.active === 'en' ? 'zh' : 'en';
+  function applyLang(lang){
+    document.body.dataset.active = lang;
+    // Mirror to <html lang> so screen readers, search engines and
+    // browser features (hyphenation, font-language) see the change.
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
     syncLangButtons();
   }
+  function toggleLang(){
+    applyLang(document.body.dataset.active === 'en' ? 'zh' : 'en');
+  }
   document.querySelectorAll('#lang, #lang-mobile').forEach(b=>b && b.addEventListener('click', toggleLang));
+  // Initial sync — if the browser default suggests Chinese, start in zh.
+  if (!document.body.dataset.active || document.body.dataset.active === 'en') {
+    if (navigator.language && navigator.language.toLowerCase().startsWith('zh')) {
+      applyLang('zh');
+    } else {
+      applyLang('en');
+    }
+  }
 
   // mobile sheet
   const burger = document.getElementById('burger');
