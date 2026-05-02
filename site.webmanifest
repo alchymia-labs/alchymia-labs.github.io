@@ -1,6 +1,6 @@
 {
-  "name": "Alchymia Labs",
-  "short_name": "Alchymia",
+  "name": "The Alephain Guild",
+  "short_name": "Alephain",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#0A0F2C",
-  "background_color": "#0A0F2C",
+  "theme_color": "#0F1115",
+  "background_color": "#FAFAF7",
   "display": "standalone"
 }

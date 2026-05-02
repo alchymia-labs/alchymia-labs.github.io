@@ -1,351 +1,1374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alchymia Labs - Quantitative Alchemy Laboratory</title>
-    <meta name="description" content="Alchymia Labs: Transmuting market chaos into actionable alpha through quantitative alchemy.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alchymia Labs · Quantitative Alchemy Laboratory</title>
+<meta name="description" content="Alchymia Labs — quantitative research arm of The Alephain Guild.">
+<meta property="og:title" content="Alchymia Labs">
+<meta property="og:description" content="Quantitative Alchemy Laboratory · A subsidiary of The Alephain Guild.">
+<meta property="og:url" content="https://alchymia.alephain.com">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://alchymia.alephain.com/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F1ECDC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11141A" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://alchymia.alephain.com">
+<link rel="icon" type="image/svg+xml" href="favicon-paper.svg" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="favicon-slate.svg" media="(prefers-color-scheme: dark)">
+<link rel="alternate icon" type="image/svg+xml" href="favicon-paper.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Alchymia Labs">
-    <meta property="og:description" content="Quantitative Alchemy Laboratory - Transmuting market chaos into actionable alpha">
-    <meta property="og:image" content="images/logo.png">
-    <meta property="og:url" content="https://alchymia.alephain.com">
-    <meta property="og:type" content="website">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8MLLSWZ362"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8MLLSWZ362');
+</script>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Alchymia Labs">
-    <meta name="twitter:description" content="Quantitative Alchemy Laboratory">
-    <meta name="twitter:image" content="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================
+   ALCHYMIA LABS · v2 · Editorial / Engraved-plate folio
+   "The document IS the design."
+   ===================================================== */
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+:root{
+  --paper:#F1ECDC;             /* warmer, more aged */
+  --paper-deep:#E7E0CB;
+  --paper-shade:#DBD3BB;
+  --ink:#0E1014;
+  --ink-soft:#22252C;
+  --ink-mute:#5A5C63;
+  --ink-faint:#8A8B90;
+  --rule:rgba(14,16,20,.14);
+  --rule-soft:rgba(14,16,20,.07);
+  --gold:#B8902C;              /* deeper, less yellow than #D4AF37 — ages with paper */
+  --slate:#11141A;
+  --slate-deep:#0A0C11;
+  --cream:#EDE9DD;
+  --cream-mute:rgba(237,233,221,.62);
+  --cream-faint:rgba(237,233,221,.32);
+}
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="48x48">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#0A0F2C">
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Newsreader',Georgia,serif;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  font-feature-settings:"onum","liga","kern";
+  overflow-x:hidden;
+}
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://alchymia.alephain.com">
+/* layered paper texture: fine grain + coarser fibres + vignette  */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:
+    radial-gradient(rgba(14,16,20,.04) 1px,transparent 1.4px),
+    radial-gradient(rgba(14,16,20,.022) 1px,transparent 1.4px);
+  background-size:3px 3px,7px 7px;
+  background-position:0 0,1.5px 1.5px;
+  opacity:.85;mix-blend-mode:multiply;
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:
+    radial-gradient(120% 120% at 50% 50%, transparent 55%, rgba(14,16,20,.13) 100%);
+}
+
+/* =================== TYPE =================== */
+.sans{font-family:'Inter',sans-serif}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace}
+.italic{font-style:italic}
+.caps{text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:500;font-family:'Inter',sans-serif}
+.smallcaps{font-variant-caps:all-small-caps;letter-spacing:.12em;font-feature-settings:"smcp"}
+.tnum{font-variant-numeric:tabular-nums}
+.figs-old{font-variant-numeric:oldstyle-nums}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:1.5px solid var(--ink);outline-offset:4px}
+::selection{background:var(--ink);color:var(--paper)}
+img,svg{display:block;max-width:100%}
+
+/* =================== LAYOUT =================== */
+.page{position:relative;z-index:2}
+.shell{
+  max-width:1320px;margin:0 auto;
+  padding:0 56px;
+  position:relative;
+}
+@media(max-width:760px){.shell{padding:0 22px}}
+
+/* engraved frame around entire body — like a folio plate */
+.plate-rule{
+  position:fixed;pointer-events:none;z-index:3;
+  inset:18px;
+  border:1px solid var(--ink);
+  opacity:.18;
+}
+.plate-rule::before,.plate-rule::after{
+  content:"";position:absolute;inset:6px;border:1px solid var(--ink);opacity:.5;
+}
+.plate-rule::after{inset:9px;opacity:.25;border-style:dashed}
+@media(max-width:760px){.plate-rule{display:none}}
+
+/* =================== MAST =================== */
+.mast{
+  padding-top:36px;position:relative;
+}
+.mast-row{
+  display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;
+  border-bottom:1px solid var(--ink);
+  padding-bottom:14px;
+}
+.mast-mark{display:flex;align-items:center;gap:14px}
+.mast-mark svg{width:30px;height:30px;color:var(--ink)}
+.mast-mark .wm{
+  font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:24px;
+  letter-spacing:-.005em;line-height:1;
+}
+.mast-meta{
+  text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);
+}
+.mast-meta strong{color:var(--ink);font-weight:500}
+.mast-nav{display:flex;gap:26px;font-family:'Inter';font-size:12px;letter-spacing:.04em}
+.mast-nav a{color:var(--ink-soft);position:relative;padding-bottom:2px}
+.mast-nav a:hover{color:var(--ink)}
+.mast-nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.mast-nav a:hover::after{transform:scaleX(1)}
+.lang-toggle{
+  background:none;border:none;cursor:pointer;font-family:inherit;font-size:11px;
+  letter-spacing:.18em;color:var(--ink-mute);padding:0;
+}
+.lang-toggle .on{color:var(--ink);font-weight:600}
+
+/* hamburger — visible only on mobile */
+.burger{
+  display:none;background:none;border:1px solid var(--ink);cursor:pointer;
+  width:42px;height:42px;padding:0;position:relative;
+}
+.burger span{
+  position:absolute;left:9px;right:9px;height:1.4px;background:var(--ink);
+  transition:transform .3s,opacity .2s,top .3s;
+}
+.burger span:nth-child(1){top:14px}
+.burger span:nth-child(2){top:20px}
+.burger span:nth-child(3){top:26px}
+.burger[aria-expanded="true"] span:nth-child(1){top:20px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){top:20px;transform:rotate(-45deg)}
+
+/* slide-down sheet (mobile only) */
+.mobile-sheet{
+  display:none;position:fixed;inset:0;z-index:50;
+  background:var(--paper);
+  padding:80px 22px 40px;
+  flex-direction:column;gap:0;
+  transform:translateY(-100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.mobile-sheet.is-open{transform:translateY(0)}
+.mobile-sheet a{
+  display:block;padding:22px 0;border-bottom:1px solid var(--rule);
+  font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:32px;
+  letter-spacing:-.01em;color:var(--ink);
+}
+.mobile-sheet a .num{
+  font-family:'JetBrains Mono',monospace;font-style:normal;font-size:11px;
+  letter-spacing:.18em;color:var(--ink-faint);margin-right:14px;text-transform:uppercase;
+  display:inline-block;width:28px;
+}
+.mobile-sheet .sheet-foot{
+  margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:24px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-mute);
+}
+.mobile-sheet .sheet-foot .gold-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+
+.mast-strip{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:6px 0 14px;border-bottom:1px solid var(--rule);
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+}
+.mast-strip .pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(184,144,44,.18);margin-right:8px;vertical-align:middle;animation:p 2.4s ease-in-out infinite}
+@keyframes p{0%,100%{opacity:.5}50%{opacity:1}}
+
+@media(max-width:1024px){
+  .mast-meta{display:none}
+  .mast-nav{display:none}
+  .burger{display:inline-flex;align-items:center;justify-content:center}
+  .mobile-sheet{display:flex}
+  .mast-row{grid-template-columns:auto 1fr auto;gap:14px}
+}
+@media(max-width:760px){
+  .mast-mark .wm{font-size:20px}
+}
+
+/* =================== HERO =================== */
+.hero{padding-top:72px;padding-bottom:96px;position:relative}
+.hero-grid{
+  display:grid;grid-template-columns:1fr 360px;gap:80px;align-items:start;
+}
+.kicker{
+  display:flex;align-items:center;gap:16px;margin-bottom:48px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink-mute);
+}
+.kicker::before{content:"";display:inline-block;width:42px;height:1px;background:var(--ink)}
+.kicker .gold{color:var(--gold);font-weight:500}
+
+/* TITLE — the centerpiece */
+.title{
+  font-family:'Newsreader',serif;
+  font-weight:300;
+  font-size:clamp(44px,9.6vw,160px);
+  line-height:.92;
+  letter-spacing:-.035em;
+  color:var(--ink);
+  margin-bottom:28px;
+  font-feature-settings:"liga","onum","ss01";
+}
+.title em{font-style:italic;font-weight:400}
+.title .alpha{
+  position:relative;display:inline-block;
+}
+.title .alpha::after{
+  content:"";position:absolute;left:0;right:0;bottom:.18em;height:.05em;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;animation:rule 1.4s .6s cubic-bezier(.2,.8,.2,1) forwards;
+}
+@keyframes rule{to{transform:scaleX(1)}}
+.title .swash{font-style:italic;color:var(--ink);position:relative}
+.title .pt{color:var(--ink-mute);font-style:normal}
+
+/* drop the deck below title in three columns of monospace metadata */
+.deck{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);
+  margin:48px 0 56px;
+}
+.deck > div{padding:18px 18px 18px 0;border-right:1px solid var(--rule)}
+.deck > div:last-child{border-right:none;padding-right:0}
+.deck .lab{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px;font-weight:500}
+.deck .val{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:22px;line-height:1.05;letter-spacing:-.01em}
+.deck .val small{font-family:'JetBrains Mono',monospace;font-style:normal;font-size:11px;color:var(--ink-mute);letter-spacing:.06em;display:block;margin-top:4px}
+
+.lede{
+  font-family:'Newsreader',serif;font-weight:400;font-size:22px;line-height:1.55;
+  max-width:62ch;color:var(--ink);letter-spacing:-.005em;text-wrap:pretty;
+}
+.lede em{font-style:italic;font-weight:500}
+.lede .pull{
+  display:block;font-family:'Newsreader',serif;font-style:italic;font-weight:400;
+  font-size:32px;line-height:1.2;color:var(--ink);margin-bottom:24px;
+  border-left:2px solid var(--ink);padding-left:24px;
+}
+
+.cta{display:flex;gap:16px;margin-top:44px;align-items:center;flex-wrap:wrap}
+.btn{
+  font-family:'Inter',sans-serif;font-weight:500;font-size:13px;letter-spacing:.04em;
+  display:inline-flex;align-items:center;gap:10px;padding:14px 22px;cursor:pointer;
+  border:1px solid var(--ink);transition:all .2s;
+}
+.btn-fill{background:var(--ink);color:var(--paper)}
+.btn-fill:hover{background:transparent;color:var(--ink)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn-line:hover{border-color:var(--ink)}
+.btn .arrow{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:18px;line-height:.8;transform:translateY(1px)}
+
+/* RIGHT — the engraved plate of the apparatus */
+.engraving{
+  position:relative;aspect-ratio:3/4;background:var(--paper-deep);
+  border:1px solid var(--ink);
+  padding:28px;
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-mute);
+}
+.engraving .corners > i{
+  position:absolute;width:10px;height:10px;border:1.4px solid var(--ink);
+}
+.engraving .corners i:nth-child(1){top:-1px;left:-1px;border-right:none;border-bottom:none}
+.engraving .corners i:nth-child(2){top:-1px;right:-1px;border-left:none;border-bottom:none}
+.engraving .corners i:nth-child(3){bottom:-1px;left:-1px;border-right:none;border-top:none}
+.engraving .corners i:nth-child(4){bottom:-1px;right:-1px;border-left:none;border-top:none}
+.engraving .head{
+  display:flex;justify-content:space-between;border-bottom:1px solid var(--rule);padding-bottom:8px;margin-bottom:16px;
+}
+.engraving .figure{
+  flex:1;display:grid;place-items:center;position:relative;min-height:340px;
+}
+.engraving .scale{
+  position:absolute;left:0;top:0;bottom:0;width:18px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;
+  font-size:8px;color:var(--ink-faint);letter-spacing:.08em;
+}
+.engraving .scale span{transform:rotate(-90deg)}
+.engraving .scale::before{content:"";position:absolute;top:8px;bottom:8px;left:50%;width:1px;background:repeating-linear-gradient(to bottom,var(--ink) 0 4px,transparent 4px 10px);opacity:.4}
+.engraving .foot{
+  display:flex;justify-content:space-between;border-top:1px solid var(--rule);padding-top:10px;margin-top:14px;
+  font-style:normal;
+}
+.engraving .foot .roman{font-family:'Newsreader',serif;font-style:italic;font-size:14px;text-transform:none;letter-spacing:0;color:var(--ink)}
+
+/* the figure itself — the apparatus, drawn */
+.apparatus{position:relative;width:240px;height:300px}
+.apparatus svg{position:absolute;inset:0;width:100%;height:100%;color:var(--ink)}
+.apparatus .label{
+  position:absolute;font-family:'Newsreader',serif;font-style:italic;font-weight:400;
+  font-size:12px;color:var(--ink);letter-spacing:0;text-transform:none;white-space:nowrap;
+}
+.apparatus .label::before{content:"";position:absolute;height:1px;background:var(--ink);}
+.apparatus .l1{top:18%;left:-72px}
+.apparatus .l1::before{left:62px;top:7px;width:32px}
+.apparatus .l2{top:50%;right:-78px;text-align:left}
+.apparatus .l2::before{right:62px;top:7px;width:32px}
+.apparatus .l3{bottom:6%;left:-66px;color:var(--gold)}
+.apparatus .l3::before{left:50px;top:7px;width:32px;background:var(--gold)}
+.apparatus .gold-fill{fill:var(--gold)}
+
+/* the droplet pulse */
+@keyframes drip{
+  0%,80%{transform:translateY(0);opacity:0}
+  10%{opacity:1}
+  60%{transform:translateY(36px);opacity:.4}
+  61%,100%{opacity:0}
+}
+.apparatus .drip{animation:drip 4s cubic-bezier(.4,.1,.7,.6) infinite;transform-origin:center}
+
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .engraving{max-width:380px;margin:0 auto}
+}
+
+/* =================== SECTION RHYTHM =================== */
+.section{padding:120px 0;position:relative;border-top:1px solid var(--ink)}
+.section.tinted{background:var(--paper-deep)}
+.folio{
+  display:grid;grid-template-columns:140px 1fr;gap:48px;margin-bottom:80px;align-items:end;
+}
+.folio .num{
+  font-family:'Newsreader',serif;font-weight:300;font-size:140px;line-height:.85;
+  letter-spacing:-.04em;color:var(--ink);font-feature-settings:"onum"
+}
+.folio .num small{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.18em;color:var(--ink-faint);display:block;text-transform:uppercase;margin-bottom:18px;font-style:normal}
+.folio h2{
+  font-family:'Newsreader',serif;font-weight:300;font-size:clamp(36px,5.6vw,72px);
+  line-height:1;letter-spacing:-.025em;max-width:14ch;
+}
+.folio h2 em{font-style:italic;font-weight:400}
+.folio .strap{
+  font-family:'Inter';font-size:13px;color:var(--ink-mute);max-width:60ch;
+  margin-top:18px;line-height:1.5;
+}
+
+@media(max-width:760px){
+  .folio{grid-template-columns:1fr;gap:18px;margin-bottom:48px}
+  .folio .num{font-size:88px}
+  .section{padding:72px 0}
+}
+
+/* =================== ABOUT =================== */
+.about-body{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  border-top:1px solid var(--ink);padding-top:48px;
+}
+.column-rule{position:relative}
+.column-rule::before{content:"";position:absolute;left:-32px;top:0;bottom:0;width:1px;background:var(--rule)}
+.about-body p{font-size:19px;line-height:1.65;margin-bottom:22px;text-wrap:pretty;max-width:42ch}
+.about-body .drop::first-letter{
+  font-family:'Newsreader',serif;font-style:italic;font-weight:400;
+  font-size:5.2em;line-height:.78;float:left;
+  margin:.06em .12em -.06em -.02em;color:var(--ink);
+  text-shadow:.02em .02em 0 rgba(184,144,44,.3);
+}
+.marg{
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-mute);
+  border-left:2px solid var(--ink);padding:4px 0 4px 14px;margin:24px 0;
+  display:inline-block;font-feature-settings:normal;
+}
+
+/* the three pillars panel */
+.pillars{
+  margin-top:64px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border:1px solid var(--ink);position:relative;background:var(--paper);
+}
+.pillar{
+  padding:40px 32px;border-right:1px solid var(--ink);position:relative;
+}
+.pillar:last-child{border-right:none}
+.pillar .glyph{
+  font-family:'Newsreader',serif;font-style:italic;font-weight:400;
+  font-size:54px;line-height:1;color:var(--ink);margin-bottom:32px;
+  display:inline-block;border-bottom:1px solid var(--ink);padding-bottom:6px;
+}
+.pillar h4{
+  font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:24px;line-height:1.1;margin-bottom:8px;
+}
+.pillar .gloss{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px}
+.pillar p{font-size:14.5px;line-height:1.6;color:var(--ink-soft);max-width:32ch}
+
+@media(max-width:980px){
+  .about-body{grid-template-columns:1fr;gap:32px}
+  .column-rule::before{display:none}
+  .pillars{grid-template-columns:1fr}
+  .pillar{border-right:none;border-bottom:1px solid var(--ink)}
+  .pillar:last-child{border-bottom:none}
+}
+
+/* =================== CAPABILITIES — engraved index =================== */
+.cap{
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.cap-row{
+  display:grid;grid-template-columns:80px 220px 1fr 220px;gap:48px;
+  padding:48px 0;border-bottom:1px solid var(--rule);
+  align-items:start;position:relative;cursor:default;
+  transition:background .25s;
+}
+.cap-row:last-child{border-bottom:none}
+.cap-row:hover{background:var(--paper-deep)}
+.cap-row:hover .cap-glyph svg{transform:scale(1.04)}
+.cap-num{
+  font-family:'Newsreader',serif;font-weight:300;font-size:64px;line-height:.85;color:var(--ink);
+  letter-spacing:-.03em;
+}
+.cap-num small{display:block;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;color:var(--ink-faint);letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.cap-glyph{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.cap-glyph svg{width:80px;height:80px;color:var(--ink);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.cap-glyph .name{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:36px;line-height:1.05;letter-spacing:-.015em}
+.cap-glyph .gloss{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute)}
+.cap-text{font-size:17px;line-height:1.65;color:var(--ink-soft);max-width:48ch;text-wrap:pretty}
+.cap-text .pull{
+  display:block;font-family:'Newsreader',serif;font-style:italic;font-weight:400;
+  font-size:24px;line-height:1.3;color:var(--ink);margin-bottom:16px;letter-spacing:-.01em;
+}
+.cap-tags{display:flex;flex-direction:column;gap:8px}
+.cap-tags .tag{
+  display:flex;justify-content:space-between;gap:14px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-soft);
+  padding:6px 0;border-bottom:1px solid var(--rule-soft);
+  letter-spacing:.04em;
+}
+.cap-tags .tag:last-child{border-bottom:none}
+.cap-tags .tag .id{color:var(--ink-faint);font-weight:500}
+
+@media(max-width:980px){
+  .cap-row{grid-template-columns:1fr;gap:18px;padding:36px 0}
+  .cap-num{font-size:48px}
+}
+
+/* =================== METHOD — diagram =================== */
+.method-stage{position:relative;border:1px solid var(--ink);background:var(--paper);padding:64px 56px}
+.method-stage::before,.method-stage::after{
+  content:"";position:absolute;background:var(--ink);
+}
+.method-stage::before{top:8px;left:8px;right:8px;height:1px;opacity:.3}
+.method-stage::after{bottom:8px;left:8px;right:8px;height:1px;opacity:.3}
+.cycle{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;
+  margin-top:20px;
+}
+/* connecting engraved line */
+.cycle::before{
+  content:"";position:absolute;left:6%;right:6%;top:42px;height:1px;
+  background:repeating-linear-gradient(to right,var(--ink) 0 6px,transparent 6px 12px);
+  opacity:.4;
+}
+.phase{position:relative;padding:0 22px}
+.phase:not(:last-child)::after{
+  content:"→";position:absolute;right:-10px;top:30px;
+  font-family:'Newsreader',serif;font-style:italic;color:var(--ink-mute);font-size:24px;
+  background:var(--paper);padding:0 8px;
+}
+.phase .seal{
+  width:84px;height:84px;border:1px solid var(--ink);border-radius:50%;
+  display:grid;place-items:center;background:var(--paper);position:relative;z-index:1;margin-bottom:28px;
+}
+.phase .seal::before{
+  content:"";position:absolute;inset:5px;border:1px solid var(--ink);border-radius:50%;opacity:.35;
+}
+.phase .seal .roman{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:30px;color:var(--ink)}
+.phase h3{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:30px;line-height:1.05;letter-spacing:-.015em;margin-bottom:6px}
+.phase .lat{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px}
+.phase p{font-size:15px;line-height:1.6;color:var(--ink-soft);max-width:24ch;margin-bottom:20px;text-wrap:pretty}
+.phase ol{list-style:none;border-top:1px solid var(--rule);padding-top:14px;counter-reset:c}
+.phase ol li{
+  counter-increment:c;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-soft);
+  padding:5px 0 5px 24px;position:relative;letter-spacing:0;
+}
+.phase ol li::before{
+  content:"."counter(c,decimal-leading-zero);position:absolute;left:0;top:5px;
+  color:var(--ink-faint);font-weight:500;
+}
+
+@media(max-width:980px){
+  .method-stage{padding:36px 24px}
+  .cycle{grid-template-columns:1fr 1fr;gap:24px 0}
+  .cycle::before,.phase::after{display:none}
+  .phase{padding:0 12px;border-bottom:1px solid var(--rule);padding-bottom:28px}
+  .phase:nth-last-child(-n+2){border-bottom:none}
+}
+
+/* the great pull-quote */
+.pull-major{
+  margin-top:96px;text-align:center;max-width:880px;margin-left:auto;margin-right:auto;
+  position:relative;
+}
+.pull-major::before,.pull-major::after{
+  content:"";position:absolute;top:50%;width:80px;height:1px;background:var(--ink);
+}
+.pull-major::before{left:-100px}
+.pull-major::after{right:-100px}
+.pull-major p{
+  font-family:'Newsreader',serif;font-style:italic;font-weight:300;
+  font-size:clamp(28px,3.6vw,44px);line-height:1.25;letter-spacing:-.015em;color:var(--ink);
+}
+.pull-major p::before{content:"\201C";color:var(--gold);font-style:normal;margin-right:.05em}
+.pull-major p::after{content:"\201D";color:var(--gold);font-style:normal;margin-left:.05em}
+.pull-major .src{margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;color:var(--ink-mute);text-transform:uppercase}
+@media(max-width:980px){.pull-major::before,.pull-major::after{display:none}}
+
+/* =================== LEDGER =================== */
+.ledger{
+  margin-top:80px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+}
+.ledger .ledger-cap{
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-faint);padding:14px 0;border-bottom:1px solid var(--rule);
+  display:flex;justify-content:space-between;
+}
+.ledger-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.ledger-cell{padding:32px 24px;border-right:1px solid var(--rule);position:relative}
+.ledger-cell:last-child{border-right:none}
+.ledger-cell .lab{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px}
+.ledger-cell .val{font-family:'Newsreader',serif;font-weight:300;font-size:64px;line-height:.9;letter-spacing:-.03em;font-feature-settings:"onum"}
+.ledger-cell .val em{font-style:italic;font-weight:400;font-size:.45em;color:var(--ink-mute);margin-left:4px}
+.ledger-cell .unit{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-mute);margin-top:10px;letter-spacing:.04em}
+@media(max-width:980px){
+  .ledger-grid{grid-template-columns:1fr 1fr}
+  .ledger-cell{border-bottom:1px solid var(--rule)}
+  .ledger-cell:nth-child(2){border-right:none}
+}
+
+/* =================== FOOTER (slate) =================== */
+.foot{
+  background:var(--slate);color:var(--cream);
+  padding:96px 0 32px;position:relative;
+  margin-top:0;
+}
+.foot::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(rgba(237,233,221,.04) 1px,transparent 1.4px),
+    radial-gradient(rgba(237,233,221,.02) 1px,transparent 1.4px);
+  background-size:3px 3px,7px 7px;
+  background-position:0 0,1.5px 1.5px;
+  opacity:.4;
+}
+.foot .shell{position:relative;z-index:1}
+.foot-mast{
+  display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px;
+  border-bottom:1px solid rgba(237,233,221,.18);padding-bottom:48px;margin-bottom:48px;
+}
+.foot-title{
+  font-family:'Newsreader',serif;font-weight:300;
+  font-size:clamp(40px,8vw,128px);line-height:.9;letter-spacing:-.035em;color:var(--cream);
+}
+.foot-title em{font-style:italic;font-weight:400}
+.foot-title .small{font-size:.42em;font-style:italic;color:var(--cream-mute);display:block;margin-top:14px;letter-spacing:-.01em}
+.foot-cta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;text-align:right}
+.foot-cta .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-faint)}
+.foot-cta a.mail{
+  font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:32px;
+  color:var(--gold);border-bottom:1px solid rgba(184,144,44,.4);padding-bottom:2px;
+  transition:border-color .2s;
+}
+.foot-cta a.mail:hover{border-bottom-color:var(--gold)}
+.foot-cta a.mail .at{color:var(--cream-mute);font-style:normal}
+
+.foot-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;
+  padding-bottom:48px;border-bottom:1px solid rgba(237,233,221,.18);
+}
+.foot-brand .mark-row{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.foot-brand .mark-row svg{width:30px;height:30px}
+.foot-brand .wm{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:22px;color:var(--cream)}
+.foot-brand p{font-size:15px;line-height:1.6;color:var(--cream-mute);max-width:36ch;margin-bottom:18px}
+.foot-brand .seal{
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;
+  color:var(--cream-faint);text-transform:uppercase;border-top:1px solid rgba(237,233,221,.16);
+  padding-top:18px;line-height:1.8;
+}
+.foot h5{
+  font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:18px;
+  color:var(--cream);margin-bottom:18px;
+}
+.foot ul{list-style:none}
+.foot ul li{margin-bottom:10px}
+.foot ul a{font-size:14px;color:var(--cream-mute);transition:color .15s;display:flex;justify-content:space-between;gap:18px}
+.foot ul a:hover{color:var(--cream)}
+.foot ul a .ext{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cream-faint);letter-spacing:.04em}
+
+.foot-bot{
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cream-faint);padding-top:24px;
+}
+.foot-bot .gold-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle;opacity:.8}
+.foot-bot a:hover{color:var(--cream)}
+
+@media(max-width:980px){
+  .foot-mast{grid-template-columns:1fr;align-items:start}
+  .foot-cta{align-items:flex-start;text-align:left}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:480px){
+  .engraving{display:none}
+}
+@media(max-width:560px){
+  .deck{grid-template-columns:1fr 1fr}
+  .deck > div{padding:14px 14px 14px 0;border-bottom:1px solid var(--rule)}
+  .deck > div:nth-child(2n){border-right:none;padding-right:0}
+  .ledger-grid{grid-template-columns:1fr 1fr}
+  .ledger-cell:nth-child(odd){border-right:1px solid var(--rule)}
+  .ledger-cell .val{font-size:44px}
+  .lede .pull,.lede{font-size:18px}
+  .lede .pull{font-size:24px;padding-left:16px}
+  .cap-glyph .name{font-size:28px}
+  .cap-text .pull{font-size:20px}
+  .folio .num{font-size:64px}
+  .pull-major p{font-size:22px}
+  .foot-grid{grid-template-columns:1fr}
+  .mobile-sheet a{font-size:26px;padding:18px 0}
+  .engraving{padding:18px}
+  .apparatus{transform:scale(.85);transform-origin:center}
+}
+
+/* =================== I18N =================== */
+[data-lang]{display:none !important}
+body[data-active="en"] [data-lang="en"]{display:revert !important}
+body[data-active="zh"] [data-lang="zh"]{display:revert !important}
+/* keep block-level pull/strap behaviour even after revert */
+.lede .pull[data-lang],.cap-text .pull[data-lang]{display:none !important}
+body[data-active="en"] .lede .pull[data-lang="en"],
+body[data-active="en"] .cap-text .pull[data-lang="en"],
+body[data-active="zh"] .lede .pull[data-lang="zh"],
+body[data-active="zh"] .cap-text .pull[data-lang="zh"]{display:block !important}
+/* paragraphs inside about-body / lede / phases must stay block */
+body[data-active="en"] p[data-lang="en"],
+body[data-active="zh"] p[data-lang="zh"]{display:block !important}
+/* h2/h3/h4/h5 must stay block */
+body[data-active="en"] h2[data-lang="en"],
+body[data-active="en"] h3[data-lang="en"],
+body[data-active="en"] h4[data-lang="en"],
+body[data-active="en"] h5[data-lang="en"],
+body[data-active="zh"] h2[data-lang="zh"],
+body[data-active="zh"] h3[data-lang="zh"],
+body[data-active="zh"] h4[data-lang="zh"],
+body[data-active="zh"] h5[data-lang="zh"]{display:block !important}
+body[data-active="zh"] .title,
+body[data-active="zh"] .folio h2,
+body[data-active="zh"] .lede,
+body[data-active="zh"] .lede .pull,
+body[data-active="zh"] .pillar h4,
+body[data-active="zh"] .pillar .glyph,
+body[data-active="zh"] .cap-glyph .name,
+body[data-active="zh"] .phase h3,
+body[data-active="zh"] .pull-major p,
+body[data-active="zh"] .foot-title,
+body[data-active="zh"] .foot h5,
+body[data-active="zh"] .foot-brand .wm,
+body[data-active="zh"] .mast-mark .wm,
+body[data-active="zh"] .deck .val,
+body[data-active="zh"] .ledger-cell .val{
+  font-family:'Newsreader','Songti SC','Source Han Serif SC','STSongti',serif;
+}
+body[data-active="zh"] .lede,body[data-active="zh"] .about-body p,body[data-active="zh"] .pillar p,body[data-active="zh"] .cap-text,body[data-active="zh"] .phase p,body[data-active="zh"] .foot-brand p{
+  font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Source Han Sans SC',sans-serif;
+}
+
+/* keep mono mono regardless of lang */
+.mono,.kicker,.deck .lab,.deck .val small,.cap-num small,.cap-tags .tag,.cap-glyph .gloss,
+.phase .lat,.phase ol li,.phase ol li::before,.ledger-cell .lab,.ledger-cell .unit,
+.ledger .ledger-cap,.foot-brand .seal,.foot ul a .ext,.foot-bot,.mast-meta,.mast-strip,
+.marg,.pillar .gloss,.pull-major .src,.engraving{font-family:'JetBrains Mono',ui-monospace,monospace !important}
+
+/* ============== reduce motion ============== */
+@media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+
+/* ============== dark mode (slate ground per v2 USAGE) ============== */
+@media(prefers-color-scheme:dark){
+  :root{
+    --paper:#11141A;--paper-deep:#181C24;--paper-shade:#212630;
+    --ink:#EDE9DD;--ink-soft:#D4D0C5;--ink-mute:#9C9A92;--ink-faint:#65645E;
+    --rule:rgba(237,233,221,.18);--rule-soft:rgba(237,233,221,.09);
+    --gold:#C9A445;
+  }
+  body::before{opacity:.35}
+  body::after{background:radial-gradient(120% 120% at 50% 50%, transparent 55%, rgba(0,0,0,.45) 100%);}
+  .foot{background:#0A0C11}
+  .plate-rule{opacity:.28}
+  .pillars,.method-stage,.engraving{background:var(--paper-deep)}
+  .btn-fill{background:var(--ink);color:var(--paper)}
+  .btn-fill:hover{background:transparent;color:var(--ink)}
+}
+</style>
 </head>
-<body>
-    <!-- Starfield Canvas -->
-    <canvas id="starfield"></canvas>
+<body data-active="en">
 
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="container nav-container">
-            <a href="#top" class="nav-logo">
-                <img src="images/logo.svg" alt="Alchymia Labs Logo" width="44" height="44">
-                <span class="nav-logo-text">Alchymia Labs</span>
-            </a>
+<div class="plate-rule"></div>
 
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<div class="page">
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" data-lang="en">ABOUT</a><a href="#about" data-lang="zh" style="display: none;">关于</a></li>
-                <li><a href="#capabilities" data-lang="en">CAPABILITIES</a><a href="#capabilities" data-lang="zh" style="display: none;">能力</a></li>
-                <li><a href="#method" data-lang="en">METHOD</a><a href="#method" data-lang="zh" style="display: none;">方法</a></li>
-                <li><a href="#contact" data-lang="en">CONTACT</a><a href="#contact" data-lang="zh" style="display: none;">联系</a></li>
-                <li>
-                    <button class="lang-toggle" id="langToggle">EN / 中文</button>
-                </li>
-            </ul>
-        </div>
+<!-- ============== MAST ============== -->
+<header class="shell mast">
+  <div class="mast-row">
+    <a href="#top" class="mast-mark" aria-label="Alchymia Labs">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 10 L52 50 L46 50 L42 41 L22 41 L18 50 L13 50 Z M27 33 L37 33 L34 38 L30 38 Z" fill="currentColor" fill-rule="evenodd"></path>
+        <ellipse cx="32" cy="55.5" rx="2.6" ry="3.2" fill="currentColor"></ellipse>
+      </svg>
+      <span class="wm" data-lang="en">Alchymia Labs</span>
+      <span class="wm" data-lang="zh">Alchymia 实验室</span>
+    </a>
+    <div class="mast-meta">
+      <span data-lang="en"><strong>Folio</strong> · ALCH·LAB / 2026 / Q2 — <strong>Solve et Coagula</strong> · the doctrine</span>
+      <span data-lang="zh"><strong>本卷</strong> · ALCH·LAB / 2026 / Q2 — <strong>Solve et Coagula</strong> · 分解，而后凝聚</span>
+    </div>
+    <nav class="mast-nav">
+      <a href="#about" data-lang="en">Laboratory</a><a href="#about" data-lang="zh">实验室</a>
+      <a href="#capabilities" data-lang="en">Capabilities</a><a href="#capabilities" data-lang="zh">能力</a>
+      <a href="#method" data-lang="en">Method</a><a href="#method" data-lang="zh">方法</a>
+      <a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="zh">联系</a>
+      <button class="lang-toggle" id="lang"><span class="en on">EN</span> · <span class="zh">中</span></button>
     </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-sheet" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mast-strip">
+    <span><span class="pulse"></span> <span data-lang="en">Live · seven channels</span><span data-lang="zh">实盘 · 七条通道</span></span>
+    <span data-lang="en">Volume I · Charter · public</span>
+    <span data-lang="zh">第一卷 · 总章程 · 公开</span>
+    <span class="tnum">26.05.02 · HKG · 22:00 UTC+8</span>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="top">
-        <div class="hero-content">
-            <div class="hero-icon">
-                <img src="images/logo.svg" alt="Alchymia Labs" class="hero-logo">
-            </div>
-            <p class="hero-subtitle" data-lang="en">QUANTITATIVE ALCHEMY LABORATORY</p>
-            <p class="hero-subtitle" data-lang="zh" style="display: none;">量化炼金实验室</p>
-            <h1 class="hero-title" data-lang="en">Transmuting Market Chaos<br>into Actionable Alpha</h1>
-            <h1 class="hero-title" data-lang="zh" style="display: none;">将市场混沌<br>炼化为可执行的Alpha</h1>
-            <p class="hero-description" data-lang="en">
-                Like ancient alchemists transmuting base metals into gold, we apply rigorous quantitative methods
-                to distill market noise into pure, actionable trading signals.
-            </p>
-            <p class="hero-description" data-lang="zh" style="display: none;">
-                如同古代炼金术士将贱金属转化为黄金，我们运用严谨的量化方法，
-                将市场噪声蒸馏提纯为可执行的交易信号。
-            </p>
-            <div class="hero-buttons">
-                <a href="#capabilities" class="btn btn-primary" data-lang="en">Explore Our Laboratory</a>
-                <a href="#capabilities" class="btn btn-primary" data-lang="zh" style="display: none;">探索实验室</a>
-                <a href="https://alephain.com" class="btn btn-secondary" data-lang="en">The Alephain Guild</a>
-                <a href="https://alephain.com" class="btn btn-secondary" data-lang="zh" style="display: none;">阿莱夫行会</a>
-            </div>
+<!-- ============== MOBILE NAV SHEET ============== -->
+<nav class="mobile-sheet" id="mobile-sheet" aria-hidden="true">
+  <a href="#about" data-sheet-link><span class="num">§ I</span><span data-lang="en">Laboratory</span><span data-lang="zh">实验室</span></a>
+  <a href="#capabilities" data-sheet-link><span class="num">§ II</span><span data-lang="en">Capabilities</span><span data-lang="zh">能力</span></a>
+  <a href="#method" data-sheet-link><span class="num">§ III</span><span data-lang="en">Method</span><span data-lang="zh">方法</span></a>
+  <a href="#contact" data-sheet-link><span class="num">§ IV</span><span data-lang="en">Contact</span><span data-lang="zh">联系</span></a>
+  <div class="sheet-foot">
+    <span><span class="gold-dot"></span>ALCH · LAB / 2026 / Q2</span>
+    <button class="lang-toggle" id="lang-mobile"><span class="en on">EN</span> · <span class="zh">中</span></button>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<section class="shell hero" id="top">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker">
+        <span data-lang="en">Volume I · Charter</span><span data-lang="zh">第一卷 · 总章程</span>
+        <span class="gold" data-lang="en">· filed 2026.05</span><span class="gold" data-lang="zh">· 2026.05 归档</span>
+      </div>
+
+      <h1 class="title" data-lang="en">
+        Translating <em>chaos</em><br>
+        into <span class="alpha">structured</span><br>
+        <em class="swash">alpha</em><span class="pt">.</span>
+      </h1>
+      <h1 class="title" data-lang="zh">
+        将 <em>混沌</em><br>
+        <span class="alpha">炼为</span><br>
+        <em class="swash">阿尔法</em><span class="pt">。</span>
+      </h1>
+
+      <div class="deck">
+        <div>
+          <div class="lab">House</div>
+          <div class="val" data-lang="en">Alchymia<small>quantitative arm</small></div>
+          <div class="val" data-lang="zh">Alchymia<small>量化研究分部</small></div>
         </div>
-        <div class="scroll-indicator">
-            <span data-lang="en">Scroll to explore</span>
-            <span data-lang="zh" style="display: none;">向下滚动探索</span>
-            <div class="scroll-arrow"></div>
+        <div>
+          <div class="lab">Parent</div>
+          <div class="val" data-lang="en">The Alephain Guild<small>est. 2024</small></div>
+          <div class="val" data-lang="zh">阿莱夫行会<small>立会于 2024</small></div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <h2 class="section-title" data-lang="en">The Laboratory</h2>
-            <h2 class="section-title" data-lang="zh" style="display: none;">关于实验室</h2>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead" data-lang="en">
-                        Alchymia Labs is the quantitative research arm of The Alephain Guild, dedicated to
-                        the systematic transmutation of market chaos into structured alpha.
-                    </p>
-                    <p class="lead" data-lang="zh" style="display: none;">
-                        Alchymia Labs是阿莱夫行会的量化研究部门，致力于将市场混沌系统性地转化为结构化的Alpha。
-                    </p>
-                    <p data-lang="en">
-                        Our name draws from the ancient art of alchemy — the precursor to modern chemistry.
-                        Where alchemists sought to transform base elements into gold through precise processes,
-                        we seek to transform raw market data into refined trading insights through rigorous
-                        quantitative methodology.
-                    </p>
-                    <p data-lang="zh" style="display: none;">
-                        我们的名称源自古老的炼金术——现代化学的先驱。正如炼金术士通过精确的工艺将贱金属转化为黄金，
-                        我们通过严谨的量化方法将原始市场数据转化为精炼的交易洞察。
-                    </p>
-                </div>
-                <div class="about-philosophy">
-                    <div class="philosophy-card">
-                        <div class="philosophy-icon">⚗️</div>
-                        <h3 data-lang="en">Solve et Coagula</h3>
-                        <h3 data-lang="zh" style="display: none;">分解与凝聚</h3>
-                        <p data-lang="en">Dissolve the complex, coagulate the essential — our approach to market analysis.</p>
-                        <p data-lang="zh" style="display: none;">分解复杂，凝聚本质——我们的市场分析方法论。</p>
-                    </div>
-                </div>
-            </div>
+        <div>
+          <div class="lab">Doctrine</div>
+          <div class="val" data-lang="en"><span style="font-style:italic">Solve et Coagula</span><small>dissolve · coagulate</small></div>
+          <div class="val" data-lang="zh"><span style="font-style:italic">Solve et Coagula</span><small>分解 · 凝聚</small></div>
         </div>
-    </section>
-
-    <!-- Capabilities Section -->
-    <section class="section capabilities" id="capabilities">
-        <div class="container">
-            <h2 class="section-title" data-lang="en">Core Capabilities</h2>
-            <h2 class="section-title" data-lang="zh" style="display: none;">核心能力</h2>
-            <p class="section-subtitle" data-lang="en">The four pillars of our quantitative alchemy</p>
-            <p class="section-subtitle" data-lang="zh" style="display: none;">量化炼金的四大支柱</p>
-
-            <div class="capabilities-grid">
-                <div class="capability-card">
-                    <div class="capability-icon">🔬</div>
-                    <h3 data-lang="en">Strategy Research</h3>
-                    <h3 data-lang="zh" style="display: none;">策略研发</h3>
-                    <p data-lang="en">
-                        Deep investigation into market microstructure, statistical patterns,
-                        and behavioral anomalies to uncover exploitable inefficiencies.
-                    </p>
-                    <p data-lang="zh" style="display: none;">
-                        深入研究市场微观结构、统计模式和行为异常，发掘可利用的市场低效。
-                    </p>
-                    <ul class="capability-features">
-                        <li data-lang="en">Factor Discovery</li>
-                        <li data-lang="zh" style="display: none;">因子挖掘</li>
-                        <li data-lang="en">Signal Generation</li>
-                        <li data-lang="zh" style="display: none;">信号生成</li>
-                        <li data-lang="en">Hypothesis Testing</li>
-                        <li data-lang="zh" style="display: none;">假设检验</li>
-                    </ul>
-                </div>
-
-                <div class="capability-card">
-                    <div class="capability-icon">⚙️</div>
-                    <h3 data-lang="en">Backtesting Engine</h3>
-                    <h3 data-lang="zh" style="display: none;">回测引擎</h3>
-                    <p data-lang="en">
-                        Rigorous historical simulation infrastructure ensuring strategy
-                        validity before deployment to live markets.
-                    </p>
-                    <p data-lang="zh" style="display: none;">
-                        严谨的历史模拟基础设施，确保策略在实盘部署前经过充分验证。
-                    </p>
-                    <ul class="capability-features">
-                        <li data-lang="en">Event-Driven Simulation</li>
-                        <li data-lang="zh" style="display: none;">事件驱动模拟</li>
-                        <li data-lang="en">Slippage Modeling</li>
-                        <li data-lang="zh" style="display: none;">滑点建模</li>
-                        <li data-lang="en">Walk-Forward Analysis</li>
-                        <li data-lang="zh" style="display: none;">滚动优化分析</li>
-                    </ul>
-                </div>
-
-                <div class="capability-card">
-                    <div class="capability-icon">🛡️</div>
-                    <h3 data-lang="en">Risk Alchemy</h3>
-                    <h3 data-lang="zh" style="display: none;">风险炼金</h3>
-                    <p data-lang="en">
-                        Transforming uncertainty into quantified risk through advanced
-                        statistical modeling and continuous monitoring.
-                    </p>
-                    <p data-lang="zh" style="display: none;">
-                        通过先进的统计建模和持续监控，将不确定性转化为可量化的风险。
-                    </p>
-                    <ul class="capability-features">
-                        <li data-lang="en">VaR & CVaR Models</li>
-                        <li data-lang="zh" style="display: none;">VaR与CVaR模型</li>
-                        <li data-lang="en">Tail Risk Analysis</li>
-                        <li data-lang="zh" style="display: none;">尾部风险分析</li>
-                        <li data-lang="en">Portfolio Optimization</li>
-                        <li data-lang="zh" style="display: none;">组合优化</li>
-                    </ul>
-                </div>
-
-                <div class="capability-card">
-                    <div class="capability-icon">💎</div>
-                    <h3 data-lang="en">Alpha Extraction</h3>
-                    <h3 data-lang="zh" style="display: none;">Alpha提取</h3>
-                    <p data-lang="en">
-                        The final distillation — extracting pure alpha from the noise
-                        through systematic signal processing and execution.
-                    </p>
-                    <p data-lang="zh" style="display: none;">
-                        最终的蒸馏提纯——通过系统性的信号处理和执行，从噪声中提取纯净的Alpha。
-                    </p>
-                    <ul class="capability-features">
-                        <li data-lang="en">Signal Filtering</li>
-                        <li data-lang="zh" style="display: none;">信号过滤</li>
-                        <li data-lang="en">Execution Optimization</li>
-                        <li data-lang="zh" style="display: none;">执行优化</li>
-                        <li data-lang="en">Performance Attribution</li>
-                        <li data-lang="zh" style="display: none;">业绩归因</li>
-                    </ul>
-                </div>
-            </div>
+        <div>
+          <div class="lab">Status</div>
+          <div class="val" data-lang="en">Active<small>seven live channels</small></div>
+          <div class="val" data-lang="zh">运行中<small>七条实盘通道</small></div>
         </div>
-    </section>
+      </div>
 
-    <!-- Method Section -->
-    <section class="section method" id="method">
-        <div class="container">
-            <h2 class="section-title" data-lang="en">The Alchemical Process</h2>
-            <h2 class="section-title" data-lang="zh" style="display: none;">炼金流程</h2>
-            <p class="section-subtitle" data-lang="en">Our systematic approach to transmuting market data into alpha</p>
-            <p class="section-subtitle" data-lang="zh" style="display: none;">将市场数据转化为Alpha的系统方法</p>
+      <p class="lede" data-lang="en">
+        <span class="pull">A small, slow, file-keeping shop.</span>
+        We do not forecast. We translate the market's chaotic surface into the geometry beneath it — the same Aleph the Guild was named for. Every artefact we file — a factor, a backtest, a live channel — is dated, signed, and reproducible from its filing alone. <em>If it cannot be reproduced, it does not leave the shop.</em>
+      </p>
+      <p class="lede" data-lang="zh">
+        <span class="pull">节奏审慎、留档严格的小作坊。</span>
+        我们不做预测。我们把市场喧嚣的表面，翻译为其下方的几何——行会得名所自的那个"阿莱夫"。我们归档的每一件器物——一个因子、一份回测、一条实盘通道——都有日期、有署名，且仅凭其归档便可复现。<em>不能复现者，不出此门。</em>
+      </p>
 
-            <div class="process-flow">
-                <div class="process-step">
-                    <div class="step-number">I</div>
-                    <div class="step-content">
-                        <h3 data-lang="en">Observation</h3>
-                        <h3 data-lang="zh" style="display: none;">观察</h3>
-                        <p data-lang="en">Gathering raw market data and identifying patterns in the chaos.</p>
-                        <p data-lang="zh" style="display: none;">收集原始市场数据，从混沌中识别模式。</p>
-                    </div>
-                </div>
+      <div class="cta">
+        <a href="#capabilities" class="btn btn-fill" data-lang="en">Read the laboratory <span class="arrow">→</span></a>
+        <a href="#capabilities" class="btn btn-fill" data-lang="zh">阅读实验室档案 <span class="arrow">→</span></a>
+        <a href="https://alephain.com" class="btn btn-line" data-lang="en">The Alephain Guild ↗</a>
+        <a href="https://alephain.com" class="btn btn-line" data-lang="zh">阿莱夫行会 ↗</a>
+      </div>
+    </div>
 
-                <div class="process-arrow">→</div>
-
-                <div class="process-step">
-                    <div class="step-number">II</div>
-                    <div class="step-content">
-                        <h3 data-lang="en">Hypothesis</h3>
-                        <h3 data-lang="zh" style="display: none;">假设</h3>
-                        <p data-lang="en">Formulating testable theories based on observed phenomena.</p>
-                        <p data-lang="zh" style="display: none;">基于观察到的现象构建可验证的理论。</p>
-                    </div>
-                </div>
-
-                <div class="process-arrow">→</div>
-
-                <div class="process-step">
-                    <div class="step-number">III</div>
-                    <div class="step-content">
-                        <h3 data-lang="en">Validation</h3>
-                        <h3 data-lang="zh" style="display: none;">验证</h3>
-                        <p data-lang="en">Rigorous backtesting and statistical validation of hypotheses.</p>
-                        <p data-lang="zh" style="display: none;">严格的回测和假设的统计验证。</p>
-                    </div>
-                </div>
-
-                <div class="process-arrow">→</div>
-
-                <div class="process-step">
-                    <div class="step-number">IV</div>
-                    <div class="step-content">
-                        <h3 data-lang="en">Distillation</h3>
-                        <h3 data-lang="zh" style="display: none;">蒸馏</h3>
-                        <p data-lang="en">Refining validated signals into deployable trading strategies.</p>
-                        <p data-lang="zh" style="display: none;">将验证过的信号精炼为可部署的交易策略。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="method-quote">
-                <blockquote>
-                    <p data-lang="en">"In the crucible of rigorous analysis, market chaos transforms into structured opportunity."</p>
-                    <p data-lang="zh" style="display: none;">"在严谨分析的坩埚中，市场混沌转化为结构化的机会。"</p>
-                </blockquote>
-            </div>
+    <!-- Engraved figure plate — the apparatus -->
+    <figure class="engraving">
+      <span class="corners"><i></i><i></i><i></i><i></i></span>
+      <div class="head">
+        <span>FIG · I</span>
+        <span data-lang="en">DISTILLATION · APPARATUS</span>
+        <span data-lang="zh">蒸馏器 · 解剖图</span>
+      </div>
+      <div class="figure">
+        <div class="scale"><span>0</span><span>32</span><span>64</span></div>
+        <div class="apparatus">
+          <!-- the chamber -->
+          <svg viewBox="0 0 240 300" aria-hidden="true">
+            <!-- guilloché stipple background -->
+            <defs>
+              <pattern id="stipple" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+                <circle cx="3" cy="3" r=".55" fill="currentColor" opacity=".25"/>
+              </pattern>
+              <pattern id="hatch" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="4" stroke="currentColor" stroke-width=".4" opacity=".4"/>
+              </pattern>
+            </defs>
+            <!-- the great A as the still vessel — apex aperture, droplet -->
+            <!-- baseline rule -->
+            <line x1="20" y1="240" x2="220" y2="240" stroke="currentColor" stroke-width="1" opacity=".35"/>
+            <line x1="20" y1="240" x2="20" y2="245" stroke="currentColor" stroke-width="1" opacity=".5"/>
+            <line x1="220" y1="240" x2="220" y2="245" stroke="currentColor" stroke-width="1" opacity=".5"/>
+            <!-- the A — open vessel -->
+            <path d="M120 30 L210 230 L188 230 L172 196 L68 196 L52 230 L30 230 Z"
+                  fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <!-- inner triangular aperture / negative-space crossbar -->
+            <path d="M95 168 L145 168 L132 188 L108 188 Z" fill="url(#hatch)" stroke="currentColor" stroke-width="1.2"/>
+            <!-- inner A core hatched -->
+            <path d="M120 60 L188 200 L172 200 L162 178 L78 178 L68 200 L52 200 Z M99 168 L141 168 L130 144 L110 144 Z"
+                  fill="url(#stipple)" stroke="none"/>
+            <!-- distillation pipe — exits right shoulder -->
+            <path d="M165 110 Q200 110 200 150 L200 230" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+            <!-- droplet — animated -->
+            <ellipse class="drip" cx="200" cy="240" rx="3.6" ry="5" fill="var(--gold)" stroke="currentColor" stroke-width=".8"/>
+            <!-- catch-droplet on baseline (faint, cumulative)-->
+            <ellipse cx="120" cy="262" rx="6" ry="3" fill="currentColor" opacity=".2"/>
+            <ellipse cx="120" cy="262" rx="3.2" ry="4" fill="var(--gold)" opacity=".6"/>
+            <!-- crosshair markers -->
+            <g opacity=".55">
+              <line x1="115" y1="30" x2="125" y2="30" stroke="currentColor" stroke-width=".8"/>
+              <line x1="120" y1="25" x2="120" y2="35" stroke="currentColor" stroke-width=".8"/>
+              <line x1="195" y1="110" x2="205" y2="110" stroke="currentColor" stroke-width=".8"/>
+              <line x1="200" y1="105" x2="200" y2="115" stroke="currentColor" stroke-width=".8"/>
+            </g>
+            <!-- tick marks -->
+            <g stroke="currentColor" stroke-width=".7" opacity=".6">
+              <line x1="14" y1="60" x2="20" y2="60"/>
+              <line x1="14" y1="100" x2="20" y2="100"/>
+              <line x1="14" y1="140" x2="20" y2="140"/>
+              <line x1="14" y1="180" x2="20" y2="180"/>
+              <line x1="14" y1="220" x2="20" y2="220"/>
+            </g>
+          </svg>
+          <span class="label l1" data-lang="en">vapor · α</span>
+          <span class="label l1" data-lang="zh">蒸气 · α</span>
+          <span class="label l2" data-lang="en">condensate</span>
+          <span class="label l2" data-lang="zh">冷凝物</span>
+          <span class="label l3" data-lang="en">distillate</span>
+          <span class="label l3" data-lang="zh">蒸馏液</span>
         </div>
-    </section>
+      </div>
+      <div class="foot">
+        <span><span class="roman">de Alchymia</span></span>
+        <span>SCALE 1 : 1</span>
+        <span>PL · 001</span>
+      </div>
+    </figure>
+  </div>
+</section>
 
-    <!-- Contact / Footer Section -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/logo.svg" alt="Alchymia Labs" class="footer-logo">
-                    <h3>Alchymia Labs</h3>
-                    <p data-lang="en">Quantitative Alchemy Laboratory</p>
-                    <p data-lang="zh" style="display: none;">量化炼金实验室</p>
-                    <p class="footer-tagline" data-lang="en">A division of The Alephain Guild</p>
-                    <p class="footer-tagline" data-lang="zh" style="display: none;">阿莱夫行会旗下</p>
-                </div>
+<!-- ============== § I  LABORATORY ============== -->
+<section class="section" id="about">
+  <div class="shell">
+    <div class="folio">
+      <div class="num">I<small data-lang="en">Section</small><small data-lang="zh">章</small></div>
+      <div>
+        <h2 data-lang="en">A small shop for slow <em>refinement</em>.</h2>
+        <h2 data-lang="zh">一间专注<em>慢炼</em>的作坊。</h2>
+        <p class="strap" data-lang="en">No mascots, no slogans, no dashboards on dashboards. The shop is named after the precursor to chemistry, not its more theatrical sibling.</p>
+        <p class="strap" data-lang="zh">没有吉祥物，没有口号，也没有套娃式的仪表盘。我们以化学的前身命名，而非它戏剧化的孪生兄弟。</p>
+      </div>
+    </div>
 
-                <div class="footer-links">
-                    <h4 data-lang="en">Navigation</h4>
-                    <h4 data-lang="zh" style="display: none;">导航</h4>
-                    <ul>
-                        <li><a href="#about" data-lang="en">About</a><a href="#about" data-lang="zh" style="display: none;">关于</a></li>
-                        <li><a href="#capabilities" data-lang="en">Capabilities</a><a href="#capabilities" data-lang="zh" style="display: none;">能力</a></li>
-                        <li><a href="#method" data-lang="en">Method</a><a href="#method" data-lang="zh" style="display: none;">方法</a></li>
-                    </ul>
-                </div>
+    <div class="about-body">
+      <div>
+        <p class="drop" data-lang="en">
+          Markets present a chaotic surface — prices, volumes, headlines, sentiment, all of it noisy at the human-readable layer. Beneath that surface is a quieter geometry: the conditional structure that makes some events likely and others impossible. The Aleph the Guild is named for is not a secret. It is just under-resolved. Our entire job is resolution.
+        </p>
+        <p class="drop" data-lang="zh">
+          市场呈现的是一个喧嚣的表面——价格、成交量、新闻、情绪，在人类可读的层面无一不是噪声。其下，藏着一个更安静的几何：那种使某些事件成为可能、使其他事件成为不可能的条件结构。行会得名所自的"阿莱夫"并不是秘密——它只是分辨率不够。我们的全部工作就是提高分辨率。
+        </p>
+        <p data-lang="en">
+          The shop's name draws from alchemy — the precursor to modern chemistry. Where alchemists sought transformation through precise, repeatable processes — heating, dissolving, distilling, condensing — we apply the same rigour to the only thing markets give us freely: numbered, timestamped events.
+        </p>
+        <p data-lang="zh">
+          作坊之名取自炼金术——它是现代化学的前身。古代炼金术士以精确可重复的工艺——加热、分解、蒸馏、凝聚——求索物质的转化；我们以同样的严谨，处理市场免费给我们的唯一东西：带编号、带时戳的事件。
+        </p>
+      </div>
+      <div class="column-rule">
+        <span class="marg" data-lang="en">// In the lab journal</span>
+        <span class="marg" data-lang="zh">// 实验日志摘录</span>
+        <p data-lang="en">
+          Every artefact we ship — a factor, a backtest, a live execution channel — is filed, dated, and signed. If a thing cannot be reproduced from its filing alone, it does not leave the shop. There are no exceptions, and the rule has cost us shipped work more than once.
+        </p>
+        <p data-lang="zh">
+          我们交付的每一件器物——一个因子、一份回测、一条实盘通道——都有编号、有日期、有署名。若某物无法仅凭其归档便复现，它就不离开作坊。无例外，且此规则不止一次让本可上线的工作止步于门内。
+        </p>
+        <p data-lang="en" style="font-style:italic;color:var(--ink-mute)">
+          We are not a fund. We are not a feed. We are a quiet apparatus that publishes its filings, refines its work in cycles, and signs its name to what it ships.
+        </p>
+        <p data-lang="zh" style="font-style:italic;color:var(--ink-mute)">
+          我们不是基金。我们不是讯号源。我们是一具安静的装置——发表归档、循环精炼、为所交付者署名。
+        </p>
+      </div>
+    </div>
 
-                <div class="footer-guild">
-                    <h4 data-lang="en">The Alephain Guild</h4>
-                    <h4 data-lang="zh" style="display: none;">阿莱夫行会</h4>
-                    <ul>
-                        <li><a href="https://alephain.com" data-lang="en">Main Site</a><a href="https://alephain.com" data-lang="zh" style="display: none;">主站</a></li>
-                        <li><a href="https://alephain.com#principles" data-lang="en">Principles</a><a href="https://alephain.com#principles" data-lang="zh" style="display: none;">原则</a></li>
-                        <li><a href="https://alephain.com#ecosystem" data-lang="en">Ecosystem</a><a href="https://alephain.com#ecosystem" data-lang="zh" style="display: none;">生态</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Three pillars -->
+    <div class="pillars">
+      <div class="pillar">
+        <span class="glyph">▲</span>
+        <h4 data-lang="en">Reason above instinct</h4>
+        <h4 data-lang="zh">理性高于直觉</h4>
+        <div class="gloss">PRINCIPLE · I</div>
+        <p data-lang="en">Numbers are the only honest witness. We argue with the data, never with each other's intuition.</p>
+        <p data-lang="zh">数据是唯一诚实的证人。我们与数据争辩，从不与彼此的直觉争辩。</p>
+      </div>
+      <div class="pillar">
+        <span class="glyph">○</span>
+        <h4 data-lang="en">First principles</h4>
+        <h4 data-lang="zh">第一性原理</h4>
+        <div class="gloss">PRINCIPLE · II</div>
+        <p data-lang="en">We do not stop at "the strategy works." We stop when we know <em>why</em> it works, and what would break it.</p>
+        <p data-lang="zh">我们不会停在"策略起作用"。我们停在"知道它<em>为何</em>起作用，以及什么会让它失效"。</p>
+      </div>
+      <div class="pillar">
+        <span class="glyph">⬚</span>
+        <h4 data-lang="en">Reproducible or it never happened</h4>
+        <h4 data-lang="zh">可复现，否则等于未发生</h4>
+        <div class="gloss">PRINCIPLE · III</div>
+        <p data-lang="en">A finding that cannot be re-derived from its filing alone is not a finding. It is a story.</p>
+        <p data-lang="zh">无法仅凭归档便重新得出的发现，不是发现——那是故事。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="footer-bottom">
-                <p data-lang="en">&copy; 2025 Alchymia Labs. All rights reserved.</p>
-                <p data-lang="zh" style="display: none;">&copy; 2025 Alchymia Labs. 保留所有权利。</p>
-                <p class="brand-adherence" data-lang="en">This website strictly adheres to The Alephain Guild Brand Guide</p>
-                <p class="brand-adherence" data-lang="zh" style="display: none;">本网站严格遵循阿莱夫行会品牌指南</p>
-            </div>
+<!-- ============== § II  CAPABILITIES ============== -->
+<section class="section tinted" id="capabilities">
+  <div class="shell">
+    <div class="folio">
+      <div class="num">II<small data-lang="en">Section</small><small data-lang="zh">章</small></div>
+      <div>
+        <h2 data-lang="en">Four <em>apparatus</em>, in continuous service.</h2>
+        <h2 data-lang="zh">四件<em>器物</em>，持续运转。</h2>
+        <p class="strap" data-lang="en">Each carries its own folio, filing code, and signed maintainer. Each obeys the doctrine. None operate alone.</p>
+        <p class="strap" data-lang="zh">每一件器物都有自己的卷宗、归档号、署名维护者。皆受作坊准则约束，无器单独运行。</p>
+      </div>
+    </div>
 
-            <a href="#top" class="back-to-top" data-lang="en">↑ BACK TO TOP</a>
-            <a href="#top" class="back-to-top" data-lang="zh" style="display: none;">↑ 返回顶部</a>
+    <div class="cap">
+      <!-- I  Observatorium -->
+      <article class="cap-row">
+        <div class="cap-num">01<small>F · 0xx</small></div>
+        <div class="cap-glyph">
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <circle cx="40" cy="40" r="32" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="40" cy="40" r="22" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="40" cy="40" r="12" fill="none" stroke="currentColor" stroke-width=".8"/>
+            <line x1="8" y1="40" x2="72" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 3"/>
+            <line x1="40" y1="8" x2="40" y2="72" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 3"/>
+            <circle cx="40" cy="40" r="2.6" fill="currentColor"/>
+            <circle cx="56" cy="32" r="1.4" fill="currentColor"/>
+            <circle cx="22" cy="48" r="1.4" fill="currentColor"/>
+            <circle cx="50" cy="56" r="1.4" fill="currentColor"/>
+          </svg>
+          <div>
+            <div class="name" data-lang="en">Observatorium</div>
+            <div class="name" data-lang="zh">观察台</div>
+            <div class="gloss" data-lang="en">strategy research</div>
+            <div class="gloss" data-lang="zh">策略研究</div>
+          </div>
         </div>
-    </footer>
+        <div class="cap-text">
+          <span class="pull" data-lang="en">"We look first. We theorise second."</span>
+          <span class="pull" data-lang="zh">"先看，再设。"</span>
+          <p data-lang="en">Investigation of microstructure, statistical regularity, and behavioural anomaly. We look for the residue the average practitioner steps over — the sign that something is conditional, not random.</p>
+          <p data-lang="zh">研究微观结构、统计规律与行为异常。我们追察一般从业者所忽略的残留物——那些暗示"有条件、非随机"的痕迹。</p>
+        </div>
+        <div class="cap-tags">
+          <div class="tag"><span data-lang="en">Factor discovery</span><span data-lang="zh">因子发掘</span><span class="id">F·001</span></div>
+          <div class="tag"><span data-lang="en">Signal generation</span><span data-lang="zh">信号生成</span><span class="id">S·014</span></div>
+          <div class="tag"><span data-lang="en">Hypothesis filing</span><span data-lang="zh">假设归档</span><span class="id">H·007</span></div>
+        </div>
+      </article>
 
-    <script src="script.js"></script>
+      <!-- II  Speculum -->
+      <article class="cap-row">
+        <div class="cap-num">02<small>B · 0xx</small></div>
+        <div class="cap-glyph">
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <rect x="8" y="8" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <rect x="20" y="20" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <rect x="30" y="30" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+            <line x1="8" y1="8" x2="20" y2="20" stroke="currentColor" stroke-width=".8"/>
+            <line x1="72" y1="8" x2="60" y2="20" stroke="currentColor" stroke-width=".8"/>
+            <line x1="8" y1="72" x2="20" y2="60" stroke="currentColor" stroke-width=".8"/>
+            <line x1="72" y1="72" x2="60" y2="60" stroke="currentColor" stroke-width=".8"/>
+            <circle cx="40" cy="40" r="2" fill="currentColor"/>
+          </svg>
+          <div>
+            <div class="name">Speculum</div>
+            <div class="gloss" data-lang="en">backtesting engine · subsystem</div>
+            <div class="gloss" data-lang="zh">回测引擎 · 子系统</div>
+          </div>
+        </div>
+        <div class="cap-text">
+          <span class="pull" data-lang="en">"A strategy that does not survive Speculum never will."</span>
+          <span class="pull" data-lang="zh">"通不过 Speculum 的策略，永远通不过。"</span>
+          <p data-lang="en">Event-driven historical simulation that disallows look-ahead by construction. Slippage, partial fills, exchange downtime — all modelled. Speculum doesn't say a strategy <em>is</em> alpha; it says whether the strategy could possibly be.</p>
+          <p data-lang="zh">事件驱动的历史模拟，结构上排除前视。滑点、部分成交、交易所宕机——一并建模。Speculum 不告诉你某策略<em>就是</em>阿尔法；它只告诉你它可能是。</p>
+        </div>
+        <div class="cap-tags">
+          <div class="tag"><span data-lang="en">Event-driven sim</span><span data-lang="zh">事件驱动模拟</span><span class="id">B·002</span></div>
+          <div class="tag"><span data-lang="en">Slippage modelling</span><span data-lang="zh">滑点建模</span><span class="id">B·009</span></div>
+          <div class="tag"><span data-lang="en">Walk-forward</span><span data-lang="zh">滚动验证</span><span class="id">B·021</span></div>
+        </div>
+      </article>
+
+      <!-- III  Pondus -->
+      <article class="cap-row">
+        <div class="cap-num">03<small>R · 0xx</small></div>
+        <div class="cap-glyph">
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <path d="M40 8 L66 18 L66 42 Q66 60 40 70 Q14 60 14 42 L14 18 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <line x1="22" y1="32" x2="58" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="24" y1="42" x2="56" y2="42" stroke="currentColor" stroke-width="1"/>
+            <line x1="28" y1="52" x2="52" y2="52" stroke="currentColor" stroke-width="1"/>
+            <circle cx="40" cy="22" r="2" fill="currentColor"/>
+          </svg>
+          <div>
+            <div class="name" data-lang="en">Pondus</div>
+            <div class="name" data-lang="zh">权衡台</div>
+            <div class="gloss" data-lang="en">risk alchemy</div>
+            <div class="gloss" data-lang="zh">风险炼金</div>
+          </div>
+        </div>
+        <div class="cap-text">
+          <span class="pull" data-lang="en">"Tail first. Expectation second. The order is not interchangeable."</span>
+          <span class="pull" data-lang="zh">"先尾部，后期望。此序不可互换。"</span>
+          <p data-lang="en">Uncertainty refined into accountable, capped, monitored risk. We ask "how badly can this fail" before "how well can it work" — the cost of the inversion is not theoretical.</p>
+          <p data-lang="zh">将不确定性提炼为可问责、有上限、受监控的风险。我们先问"它能多坏地失败"，再问"它能多好地起作用"——颠倒此序的代价并非理论上的。</p>
+        </div>
+        <div class="cap-tags">
+          <div class="tag"><span data-lang="en">VaR &amp; CVaR</span><span data-lang="zh">VaR / CVaR</span><span class="id">R·003</span></div>
+          <div class="tag"><span data-lang="en">Tail-risk study</span><span data-lang="zh">尾部研究</span><span class="id">R·018</span></div>
+          <div class="tag"><span data-lang="en">Portfolio optim.</span><span data-lang="zh">组合优化</span><span class="id">R·024</span></div>
+        </div>
+      </article>
+
+      <!-- IV  Distillatum -->
+      <article class="cap-row">
+        <div class="cap-num">04<small>A · 0xx</small></div>
+        <div class="cap-glyph">
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <path d="M40 14 L66 60 L58 60 L52 50 L28 50 L22 60 L14 60 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M32 40 L48 40 L44 46 L36 46 Z" fill="currentColor"/>
+            <ellipse cx="40" cy="68" rx="3.4" ry="4" fill="var(--gold)" stroke="currentColor" stroke-width=".8"/>
+          </svg>
+          <div>
+            <div class="name" data-lang="en">Distillatum</div>
+            <div class="name" data-lang="zh">蒸馏所</div>
+            <div class="gloss" data-lang="en">alpha extraction</div>
+            <div class="gloss" data-lang="zh">阿尔法提取</div>
+          </div>
+        </div>
+        <div class="cap-text">
+          <span class="pull" data-lang="en">"At cycle's end, attribution returns to the source factor."</span>
+          <span class="pull" data-lang="zh">"周期之末，业绩归因须回到最初的因子。"</span>
+          <p data-lang="en">The final apparatus. Validated signals condensed into deployable channels under continuous risk supervision. At the close of every settlement window, attribution flows back to the originating factor — the cycle is closed, not declared finished.</p>
+          <p data-lang="zh">最末一件器物。将经验证的信号凝聚为可部署的通道，于持续风控下运行。每个结算窗口收盘时，业绩归因须回到原始因子——循环是闭合的，而非宣告"完成"的。</p>
+        </div>
+        <div class="cap-tags">
+          <div class="tag"><span data-lang="en">Signal filtering</span><span data-lang="zh">信号过滤</span><span class="id">A·005</span></div>
+          <div class="tag"><span data-lang="en">Execution optim.</span><span data-lang="zh">执行优化</span><span class="id">A·012</span></div>
+          <div class="tag"><span data-lang="en">Live attribution</span><span data-lang="zh">实盘归因</span><span class="id">A·031</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== § III  METHOD ============== -->
+<section class="section" id="method">
+  <div class="shell">
+    <div class="folio">
+      <div class="num">III<small data-lang="en">Section</small><small data-lang="zh">章</small></div>
+      <div>
+        <h2 data-lang="en">The <em>alchemical</em> cycle, in four turns.</h2>
+        <h2 data-lang="zh"><em>炼金</em>循环，四转。</h2>
+        <p class="strap" data-lang="en">A research cycle is a closed loop, not a launch. Every channel re-enters observation upon every settlement.</p>
+        <p class="strap" data-lang="zh">研究是一个闭合的循环，而非一次启动。每条通道在每次结算后，都将重新回到观察阶段。</p>
+      </div>
+    </div>
+
+    <div class="method-stage">
+      <div class="cycle">
+        <div class="phase">
+          <div class="seal"><span class="roman">I</span></div>
+          <div class="lat">PHASE · OBSERVATIO</div>
+          <h3 data-lang="en">Observation</h3>
+          <h3 data-lang="zh">观察</h3>
+          <p data-lang="en">Raw events are gathered, dated, and laid out. We do not theorise yet; we look.</p>
+          <p data-lang="zh">收集、标注、铺展原始事件。此阶段不作理论假设——我们只是看。</p>
+          <ol>
+            <li data-lang="en">Tick &amp; book recording</li>
+            <li data-lang="zh">逐笔与档口记录</li>
+            <li data-lang="en">Cross-venue alignment</li>
+            <li data-lang="zh">跨场所对齐</li>
+            <li data-lang="en">Anomaly logging</li>
+            <li data-lang="zh">异常日志</li>
+          </ol>
+        </div>
+        <div class="phase">
+          <div class="seal"><span class="roman">II</span></div>
+          <div class="lat">PHASE · HYPOTHESIS</div>
+          <h3 data-lang="en">Hypothesis</h3>
+          <h3 data-lang="zh">假设</h3>
+          <p data-lang="en">A theory is filed. It declares what would falsify it before it asks for resources.</p>
+          <p data-lang="zh">提出理论并归档。在申请资源之前，它须先声明何种证据可将其证伪。</p>
+          <ol>
+            <li data-lang="en">RFC drafted</li>
+            <li data-lang="zh">RFC 起草</li>
+            <li data-lang="en">Falsifier declared</li>
+            <li data-lang="zh">证伪条件声明</li>
+            <li data-lang="en">Scope &amp; cost noted</li>
+            <li data-lang="zh">范围与成本登记</li>
+          </ol>
+        </div>
+        <div class="phase">
+          <div class="seal"><span class="roman">III</span></div>
+          <div class="lat">PHASE · VALIDATIO</div>
+          <h3 data-lang="en">Validation</h3>
+          <h3 data-lang="zh">验证</h3>
+          <p data-lang="en">Speculum runs the hypothesis against ungenerous data. Most theories do not survive — they are not meant to.</p>
+          <p data-lang="zh">让 Speculum 在严苛数据下检验假设。多数理论无法通过——本就如此。</p>
+          <ol>
+            <li data-lang="en">Walk-forward suite</li>
+            <li data-lang="zh">滚动验证</li>
+            <li data-lang="en">Stress &amp; tail study</li>
+            <li data-lang="zh">压力与尾部研究</li>
+            <li data-lang="en">Peer signature</li>
+            <li data-lang="zh">同行会签</li>
+          </ol>
+        </div>
+        <div class="phase">
+          <div class="seal"><span class="roman">IV</span></div>
+          <div class="lat">PHASE · DISTILLATIO</div>
+          <h3 data-lang="en">Distillation</h3>
+          <h3 data-lang="zh">蒸馏</h3>
+          <p data-lang="en">Survivors are condensed into live channels under continuous risk supervision; their attribution returns to step I.</p>
+          <p data-lang="zh">通过验证者凝聚为实盘通道，于持续风控下运行；其归因回溯至第 I 步。</p>
+          <ol>
+            <li data-lang="en">Canary deployment</li>
+            <li data-lang="zh">金丝雀上线</li>
+            <li data-lang="en">Live attribution</li>
+            <li data-lang="zh">实盘归因</li>
+            <li data-lang="en">Return to obs.</li>
+            <li data-lang="zh">回到观察</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="pull-major">
+      <p data-lang="en">In the crucible of rigorous analysis, market chaos transforms — slowly, traceably, never glamorously — into structured opportunity.</p>
+      <p data-lang="zh">在严谨分析的坩埚之中，市场的混沌——缓慢、可溯、从不华丽地——转化为结构化的机会。</p>
+      <div class="src" data-lang="en">— Alchymia Labs · house epigraph · ALCH·LAB / 2026 / Q2 / 002</div>
+      <div class="src" data-lang="zh">— Alchymia Labs · 作坊铭言 · ALCH·LAB / 2026 / Q2 / 002</div>
+    </blockquote>
+
+    <div class="ledger">
+      <div class="ledger-cap">
+        <span data-lang="en">Operations · 2026 · Q2 · ledger</span>
+        <span data-lang="zh">运营 · 2026 · Q2 · 总账</span>
+        <span data-lang="en">figures illustrative · live counters wired post-launch</span>
+        <span data-lang="zh">数字示意 · 上线后接入实时计数器</span>
+      </div>
+      <div class="ledger-grid">
+        <div class="ledger-cell">
+          <div class="lab" data-lang="en">Active channels</div>
+          <div class="lab" data-lang="zh">运行中通道</div>
+          <div class="val">07<em data-lang="en">live</em><em data-lang="zh">实盘</em></div>
+          <div class="unit" data-lang="en">live · canary · paused</div>
+          <div class="unit" data-lang="zh">实盘 · 金丝雀 · 暂停</div>
+        </div>
+        <div class="ledger-cell">
+          <div class="lab" data-lang="en">Filed RFCs</div>
+          <div class="lab" data-lang="zh">已归档 RFC</div>
+          <div class="val">142<em data-lang="en">since '24</em><em data-lang="zh">自 24</em></div>
+          <div class="unit" data-lang="en">since 2024 · Q3</div>
+          <div class="unit" data-lang="zh">自 2024 · Q3</div>
+        </div>
+        <div class="ledger-cell">
+          <div class="lab" data-lang="en">Reproducibility</div>
+          <div class="lab" data-lang="zh">可复现率</div>
+          <div class="val">100<em>%</em></div>
+          <div class="unit" data-lang="en">filing-to-result</div>
+          <div class="unit" data-lang="zh">归档至结果</div>
+        </div>
+        <div class="ledger-cell">
+          <div class="lab" data-lang="en">Decision quorum</div>
+          <div class="lab" data-lang="zh">决策法定数</div>
+          <div class="val">3<em>/5</em></div>
+          <div class="unit" data-lang="en">core council</div>
+          <div class="unit" data-lang="zh">核心议会</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="foot" id="contact">
+  <div class="shell">
+    <div class="foot-mast">
+      <div class="foot-title">
+        <span data-lang="en">Write to the <em>laboratory</em>.</span>
+        <span data-lang="zh"><em>致信</em>实验室。</span>
+        <span class="small" data-lang="en">Quiet shop. Small inbox. We read everything.</span>
+        <span class="small" data-lang="zh">作坊清静，邮箱不大，每封都读。</span>
+      </div>
+      <div class="foot-cta">
+        <span class="label" data-lang="en">Correspondence</span>
+        <span class="label" data-lang="zh">来函</span>
+        <a href="mailto:alchymia@alephain.com" class="mail">alchymia<span class="at">@</span>alephain.com</a>
+      </div>
+    </div>
+
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="mark-row">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 10 L52 50 L46 50 L42 41 L22 41 L18 50 L13 50 Z M27 33 L37 33 L34 38 L30 38 Z" fill="var(--cream)" fill-rule="evenodd"></path>
+            <ellipse cx="32" cy="55.5" rx="2.6" ry="3.2" fill="var(--cream)"></ellipse>
+          </svg>
+          <span class="wm" data-lang="en">Alchymia Labs</span>
+          <span class="wm" data-lang="zh">Alchymia 实验室</span>
+        </div>
+        <p data-lang="en">A small, slow, file-keeping shop. Quantitative research arm of The Alephain Guild.</p>
+        <p data-lang="zh">一间节奏审慎、留档严格的小作坊。阿莱夫行会下属的量化研究部门。</p>
+        <div class="seal">
+          ALCH · LAB / 2026 / Q2<br>
+          <a href="https://alchymia.alephain.com" style="color:inherit">alchymia.alephain.com</a>
+        </div>
+      </div>
+      <div>
+        <h5 data-lang="en">Folio</h5>
+        <h5 data-lang="zh">本卷</h5>
+        <ul>
+          <li><a href="#about" data-lang="en"><span>§ I &nbsp;Laboratory</span><span class="ext">about</span></a><a href="#about" data-lang="zh"><span>§ I &nbsp;实验室</span><span class="ext">about</span></a></li>
+          <li><a href="#capabilities" data-lang="en"><span>§ II &nbsp;Capabilities</span><span class="ext">cap</span></a><a href="#capabilities" data-lang="zh"><span>§ II &nbsp;能力</span><span class="ext">cap</span></a></li>
+          <li><a href="#method" data-lang="en"><span>§ III &nbsp;Method</span><span class="ext">how</span></a><a href="#method" data-lang="zh"><span>§ III &nbsp;方法</span><span class="ext">how</span></a></li>
+          <li><a href="#contact" data-lang="en"><span>§ IV &nbsp;Contact</span><span class="ext">mail</span></a><a href="#contact" data-lang="zh"><span>§ IV &nbsp;联系</span><span class="ext">mail</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-lang="en">The Guild</h5>
+        <h5 data-lang="zh">行会</h5>
+        <ul>
+          <li><a href="https://alephain.com" target="_blank" rel="noopener"><span data-lang="en">Mother site</span><span data-lang="zh">母站</span><span class="ext">↗</span></a></li>
+          <li><a href="https://alephain.com#principles" target="_blank" rel="noopener"><span data-lang="en">Core principles</span><span data-lang="zh">核心原则</span><span class="ext">↗</span></a></li>
+          <li><a href="https://github.com/the-alephain-guild/brand-guide" target="_blank" rel="noopener"><span data-lang="en">Brand guide v2</span><span data-lang="zh">品牌指南 v2</span><span class="ext">↗</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-lang="en">Apparatus</h5>
+        <h5 data-lang="zh">器物</h5>
+        <ul>
+          <li><a href="#capabilities"><span>Speculum</span><span class="ext" data-lang="en">backtest</span><span class="ext" data-lang="zh">回测</span></a></li>
+          <li><a href="https://crucible.alephain.com" target="_blank" rel="noopener"><span>Crucible</span><span class="ext" data-lang="en">execution ↗</span><span class="ext" data-lang="zh">执行 ↗</span></a></li>
+          <li><a href="https://tesseract.alephain.com" target="_blank" rel="noopener"><span>Tesseract</span><span class="ext" data-lang="en">trading ↗</span><span class="ext" data-lang="zh">交易 ↗</span></a></li>
+          <li><a href="https://synedrion.alephain.com" target="_blank" rel="noopener"><span>Synedrion</span><span class="ext" data-lang="en">council ↗</span><span class="ext" data-lang="zh">议事 ↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bot">
+      <div data-lang="en">© 2026 · Alchymia Labs · all rights reserved</div>
+      <div data-lang="zh">© 2026 · Alchymia Labs · 保留全部权利</div>
+      <div>
+        <span class="gold-dot"></span>
+        <span data-lang="en">Adheres to The Alephain Guild Brand Guide · v2.0</span>
+        <span data-lang="zh">遵循阿莱夫行会品牌指南 · v2.0</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<script>
+  // language toggle (works for both desktop and mobile buttons)
+  function syncLangButtons(){
+    document.querySelectorAll('.lang-toggle .en, .lang-toggle .zh').forEach(el=>el.classList.remove('on'));
+    document.querySelectorAll('.lang-toggle .' + document.body.dataset.active).forEach(el=>el.classList.add('on'));
+  }
+  function toggleLang(){
+    document.body.dataset.active = document.body.dataset.active === 'en' ? 'zh' : 'en';
+    syncLangButtons();
+  }
+  document.querySelectorAll('#lang, #lang-mobile').forEach(b=>b && b.addEventListener('click', toggleLang));
+
+  // mobile sheet
+  const burger = document.getElementById('burger');
+  const sheet = document.getElementById('mobile-sheet');
+  function setSheet(open){
+    if(!burger||!sheet) return;
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    sheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+    sheet.classList.toggle('is-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  if(burger) burger.addEventListener('click', () => setSheet(!sheet.classList.contains('is-open')));
+  document.querySelectorAll('[data-sheet-link]').forEach(a => a.addEventListener('click', () => setSheet(false)));
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') setSheet(false); });
+</script>
 </body>
 </html>
