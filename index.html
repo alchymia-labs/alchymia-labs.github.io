@@ -16,10 +16,17 @@
 <meta name="theme-color" content="#F1ECDC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#11141A" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://alchymia.alephain.com">
-<link rel="icon" type="image/svg+xml" href="favicon-paper.svg" media="(prefers-color-scheme: light)">
-<link rel="icon" type="image/svg+xml" href="favicon-slate.svg" media="(prefers-color-scheme: dark)">
-<link rel="alternate icon" type="image/svg+xml" href="favicon-paper.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<!-- Single SVG favicon. Chrome's support for <link media> selectors
+     on icons is unreliable (often picks the wrong one), so we hand
+     theming to the SVG itself: favicon.svg has an internal
+     prefers-color-scheme @media that flips ink to cream on dark
+     browser chrome. paper/slate variants are kept as separate
+     assets for non-browser uses (social, brand-guide). -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=7">
+<link rel="alternate icon" type="image/x-icon" href="favicon.ico?v=7">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png?v=7">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=7">
+<link rel="manifest" href="site.webmanifest">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MLLSWZ362"></script>
